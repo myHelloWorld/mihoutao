@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
-  attr_accessible :description, :id, :name, :price, :tags_attributes
+  attr_accessible :description, :id, :name, :price, :weight, :tags_attributes
   has_many :comments
   has_many :tags
   accepts_nested_attributes_for :tags, :allow_destroy => :true,
