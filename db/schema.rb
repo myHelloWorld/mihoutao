@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121209032417) do
+ActiveRecord::Schema.define(:version => 20121215070339) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -34,5 +34,14 @@ ActiveRecord::Schema.define(:version => 20121209032417) do
     t.decimal  "minPrice"
     t.decimal  "maxPrice"
   end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.integer  "item_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "tags", ["item_id"], :name => "index_tags_on_item_id"
 
 end
