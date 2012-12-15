@@ -1,0 +1,11 @@
+<%= @items.each do |item| %>
+  <div>
+    <%= item.name %>
+    <%= item.id %>
+    <%= link_to 'edit', edit_item_path(item) %>
+    <%= link_to 'show', item %>
+    <%= link_to 'delete',item, method: :delete %>
+  </div>
+<% end %>
+
+<%= link_to 'new', new_item_path %>
