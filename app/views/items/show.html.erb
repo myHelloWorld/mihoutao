@@ -5,6 +5,10 @@
 <%= @item.weight %>
 <br/>
 
+<p>
+  <b> Tags: </b>
+  <%= @item.tags.map {|t| t.name }.join {","} %>
+</p>  
 <h2> New Comment </h2>
 <%= render @item.comments %>
 <h2> Add a comment </h2>
