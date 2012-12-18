@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  http_basic_authenticate_with :name=> "mht", :password=>"rocks"
   # /items/1/comment
   def create
     #why item_id? not :id
