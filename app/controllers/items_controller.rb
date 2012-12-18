@@ -1,5 +1,6 @@
 #get /items
 class ItemsController < ApplicationController
+  http_basic_authenticate_with :name=> "mht", :password=>"rocks", :except=>[:index,:item]
 def index
   @items = Item.all
   respond_to do |format|
