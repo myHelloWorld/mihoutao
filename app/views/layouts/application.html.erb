@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%= render :partial=> 'layout/ga' if RAILS_ENV == 'production' %>
 <%= yield %>
 
 </body>
