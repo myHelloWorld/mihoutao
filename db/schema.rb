@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121215070339) do
+ActiveRecord::Schema.define(:version => 20121224091035) do
+
+  create_table "attachments", :force => true do |t|
+    t.string   "filename"
+    t.string   "url"
+    t.integer  "size"
+    t.string   "fileType"
+    t.string   "diskFilename"
+    t.string   "description"
+    t.integer  "item_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "attachments", ["item_id"], :name => "index_attachments_on_item_id"
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -33,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20121215070339) do
     t.decimal  "weight"
     t.decimal  "minPrice"
     t.decimal  "maxPrice"
+    t.string   "image"
   end
 
   create_table "tags", :force => true do |t|

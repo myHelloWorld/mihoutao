@@ -1,5 +1,5 @@
 <% @item.tags.build %>
-<%= form_for(@item) do |f| %>
+<%= form_for @item, :html => { :multiple => true } do |f| %>
   <div>
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -16,5 +16,6 @@
   </div>
       <%= render :partial => 'tags/form',
                  :locals => {:form => f } %>
+  <%= f.file_field :image %>
   <%= f.submit %>
 <% end %>

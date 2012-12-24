@@ -36,3 +36,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+#https://github.com/jnicklas/carrierwave
+gem 'carrierwave'
+gem 'rmagick'

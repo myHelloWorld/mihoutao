@@ -3,7 +3,14 @@
 <br/>
 <label> weight </label>
 <%= @item.weight %>
+
+<%-
+#http://rubysource.com/processing-images-with-carrierwave/
+-%>
+<%= image_tag @item.image_url(:thumb) %>
+
 <br/>
+
 
 <p>
   <b> Tags: </b>
