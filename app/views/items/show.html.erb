@@ -1,14 +1,21 @@
-<label>name </label>
+<h2>
+Product
+</h2>
+<div>
+  <b> <label>name </label> </b>
 <%= @item.name %>
-<br/>
-<label> weight </label>
-<%= @item.weight %>
+</div>
+<div>
+  <b><label> weight </label></d>
+  <%= @item.weight %>
+</div>
 
 <%-
 #http://rubysource.com/processing-images-with-carrierwave/
 -%>
-<%= image_tag @item.image_url(:thumb) %>
-
+<div>
+  <%= image_tag @item.image_url(:thumb) %>
+</div>
 <br/>
 
 
