@@ -1,6 +1,7 @@
 Mihoutao::Application.routes.draw do
   resources :items do
     resources :comments
+    resources :attachments
   end
 
   get "home/index"

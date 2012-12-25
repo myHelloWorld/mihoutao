@@ -36,6 +36,16 @@ Product
   </div>
   <%= f.submit %>
 <% end %>
+
+<h2> New Attachment</h2>
+<%= render @item.attachments %>
+<%= form_for([@item, @item.attachments.build]) do |f| %>
+  <%= f.label :isProfile %>
+  <%= f.check_box :isProfile %>
+  <div class="actions">  
+  <%= f.submit  %>
+  </div>
+<% end %>
 <%= link_to 'Edit', edit_item_path(@item) %>
 <%= link_to 'Back', items_path %>
 
