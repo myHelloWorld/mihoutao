@@ -16,7 +16,9 @@
   </div>
       <%= render :partial => 'tags/form',
                  :locals => {:form => f } %>
-  <%= f.file_field :image %>
-  
+  <h2> Images</h2>
+  <div>
+    <%= f.file_field :image %>
+  </div>
   <%= f.submit %>
 <% end %>
