@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121225061303) do
+ActiveRecord::Schema.define(:version => 20121228215856) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "index"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20121225061303) do
     t.integer  "item_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "image"
   end
 
   add_index "attachments", ["item_id"], :name => "index_attachments_on_item_id"
@@ -44,6 +45,14 @@ ActiveRecord::Schema.define(:version => 20121225061303) do
     t.decimal  "minPrice"
     t.decimal  "maxPrice"
     t.string   "image"
+  end
+
+  create_table "shops", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "comment"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "tags", :force => true do |t|
