@@ -1,4 +1,5 @@
  <p>
   <b>Set as profile </b>
   <%= attachment.isProfile %>
+  <%= link_to 'Delete Attachment', [attachment.item, attachment], :method => :delete, :confirm=> 'Delete this attachment?' %>
 </p>
