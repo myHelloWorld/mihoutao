@@ -3,6 +3,10 @@ Mihoutao::Application.routes.draw do
     resources :comments
     resources :attachments
   end
+  
+  resources :shops do
+
+  end
 
   get "home/index"
 
