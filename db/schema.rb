@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121228215856) do
+ActiveRecord::Schema.define(:version => 20130103092443) do
 
   create_table "attachments", :force => true do |t|
     t.integer  "index"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(:version => 20121228215856) do
     t.integer  "item_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "image"
   end
 
   add_index "attachments", ["item_id"], :name => "index_attachments_on_item_id"
@@ -33,6 +32,13 @@ ActiveRecord::Schema.define(:version => 20121228215856) do
   end
 
   add_index "comments", ["item_id"], :name => "index_comments_on_item_id"
+
+  create_table "contacts", :force => true do |t|
+    t.string   "ContactType"
+    t.string   "ContactValue"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "items", :force => true do |t|
     t.string   "name"
@@ -49,10 +55,21 @@ ActiveRecord::Schema.define(:version => 20121228215856) do
 
   create_table "shops", :force => true do |t|
     t.string   "name"
+    t.string   "shopCode"
+    t.string   "personFirstName"
+    t.string   "personLastName"
     t.string   "description"
-    t.string   "comment"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "phone"
+    t.string   "fax"
+    t.string   "email"
+    t.string   "addressLineOne"
+    t.string   "addressLineTwo"
+    t.string   "addressLineThree"
+    t.string   "city"
+    t.string   "suburb"
+    t.integer  "contacts_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "tags", :force => true do |t|
