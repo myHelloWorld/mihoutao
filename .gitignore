@@ -16,7 +16,7 @@ rerun.txt
 pickle-email-*.html
 .DS_Store
 /public/assets/*
-
+.project
 .gitignore.swp
 
 .gitignore.swp
