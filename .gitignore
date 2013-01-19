@@ -20,3 +20,4 @@ pickle-email-*.html
 .gitignore.swp
 
 .gitignore.swp
+/config/database.yml
