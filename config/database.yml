@@ -19,7 +19,14 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/mht_prod.sqlite3
-  pool: 5
-  timeout: 5000
+#  adapter: sqlite3
+#  database: db/mht_prod.sqlite3
+#  pool: 5
+#  timeout: 5000
+
+  adapter: mysql2
+  host: localhost
+  database: mht
+  username: mht
+  password: wel0vemysq!
+

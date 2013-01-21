@@ -5,7 +5,14 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'execjs'
-gem 'therubyracer', '~>0.11.0'
+#20Jan13 start, michael
+#error with 0.11.0, fix to 0.10.2 
+#The Ruby Racer requires libv8 ~> 3.11.8
+#gem 'therubyracer', '~>0.11.0'
+
+gem 'therubyracer', '0.10.2'
+#20Jan13 End
+
 
 gem 'sqlite3'
 
@@ -42,3 +49,12 @@ gem 'jquery-rails'
 #https://github.com/jnicklas/carrierwave
 gem 'carrierwave'
 gem 'rmagick'
+
+#21Jan13 michael, support mysql in production
+group :production do
+  gem 'mysql2', '~> 0.3.11'
+end
+#http://gembundler.com/rationale.html
+#http://rubygems.org/gems/mysql2
+#http://stackoverflow.com/questions/9609985/please-install-mysql-adapter-gem-install-activerecord-mysql-adapter
+#21Jan13 end
